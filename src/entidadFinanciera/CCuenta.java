@@ -3,10 +3,15 @@
  * and open the template in the editor.
  */
 
-package tarea4endes24;
+package entidadFinanciera;
 
 
 public class CCuenta {
+      /**
+     * Mensaje de error cuando se intenta ingresar una cantidad negativa.
+     */
+    public static final String ERRORCANTIDADNEGATIVA = "No se puede ingresar una cantidad negativa";
+
 
     /**
      * Nombre de la persona titular
@@ -34,7 +39,7 @@ public class CCuenta {
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
-            throw new Exception("No se puede ingresar una cantidad negativa");
+            throw new Exception(ERRORCANTIDADNEGATIVA);
         saldo = saldo + cantidad;
     }
 
